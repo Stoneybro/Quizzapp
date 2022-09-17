@@ -59,7 +59,19 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-/* //////HOME PAGE/////// */
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+/* /////////////////////////////////HOME PAGE//////////////////////////// */
+
+/* Homepage quizapp text and circle containing initials */
+
 .quizapp-text-profile{
   display: flex;
   justify-content: space-between;
@@ -74,10 +86,18 @@ p {
   color: white;
   background-color: var(--primary-color);
   border-radius: 50%;
-  padding: 0.5rem 1rem;
+  height: 2rem;
+  width: 2rem;
   font-weight: 700;
   font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/*  ///////////*/
+
+
+/* home page mini dashboard/card that contains user quiz info */
 .home-dashboard{
   display: flex;
   justify-content: center;
@@ -108,6 +128,9 @@ p {
   font-weight: 600;
   font-size: 1.4rem;
 }
+
+
+/* category and difficulty section homepage */
 .difficulty{
   margin-top: 1.95rem;
 }
@@ -135,7 +158,7 @@ p {
   background-color: var(--secondary-color);
   border: none;
   width: 10rem;
-  height: 10vh;
+  height: 5.5rem;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.8rem;
@@ -160,11 +183,13 @@ p {
   justify-content: center;
   gap: 1rem;
 }
+
+/* homepage start button */
 .start{
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 1rem 5rem;
+  padding: 1rem 0;
   width: 80%;
   margin: 10vh auto 15vh;
   font-size: 1.2rem;
@@ -174,12 +199,13 @@ p {
   background-color: var(--inactive);
 }
 
+/* bottom navbar */
 .bottomnavbar{
   position: fixed;
   bottom: 0;
   width: 100%;
   left: 0;
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -193,7 +219,9 @@ p {
   align-items: center;
   color: var(--gray);
 }
-/* ////////////////////////// */
+/* /////////////////////////////////// */
+
+
 
 
 /* ////////////Quiz Page////////////// */
@@ -204,7 +232,6 @@ p {
   flex-direction: column;
   gap: 4rem;
 }
-
 .quizpage-topbar{
   position: fixed;
   top: 0;
@@ -287,6 +314,8 @@ p {
 }
 
 
+
+/* score modal (just learnt that modal means requiring immediate user interaction(*it cant be closed till a decision is made*)) */
 .modalscores{
   background-color: rgba(255, 255, 255, 0.913);
   position: fixed;
@@ -324,6 +353,8 @@ p {
 .yourscores img{
   width: 6rem;
 }
+
+/* check answers */
 .wrong-ans{
   background-color:  rgb(247, 113, 113);
   color: black;
@@ -333,13 +364,7 @@ p {
   background-color:aquamarine ;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.256);
 }
-.cancelmodal{
-  color: red;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-.restart{
+.gohome{
   background-color: var(--selected);
   color: white;
   border: none;
@@ -349,15 +374,17 @@ p {
   width: 90%;
   font-size: 1.2rem;
 }
-/* /////////history///////// */
+
+
+
+/* /////////history page///////// */
 .recent-topbar{
   background-color: #F5F5F5;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
- 
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   top: 0;
   left: 0;
   align-items: center;
@@ -378,14 +405,9 @@ p {
   font-weight: 600;
   align-items: center;
   gap: 0.2rem;
-  
 }
-.loading{
-  text-align: center;
-  font-size: 3rem;
-}
-.recent-cards{
-  margin: 6rem 0;
+.recent-card-container{
+  margin: 5rem 0 6rem;
 }
 .recent-card{
   background-color: white;
@@ -394,22 +416,11 @@ p {
   display: flex;
   width: 95%;
   margin: 0 auto 2rem;
-
-}
-.recent-cards .icon{
-width: 5rem;
-height: 5rem;
-background-color: rgba(255, 255, 0, 0.489);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-right: 1.5rem;
 }
 .recent-card .title-scores{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  
 }
 .title-scores .title{
   font-size: 1rem;
@@ -422,20 +433,7 @@ margin-right: 1.5rem;
   font-weight: 600;
   color:  rgba(247, 117, 115, 1);
 }
-.modalbuttons{
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-.modalhistory{
-  background-color: var(--background-color-purplish);
-  padding: 0.3rem 1rem;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.256);
-}
+
 .goback{
   background-color: var(--background-color-purplish);
   color: white;
@@ -445,15 +443,9 @@ margin-right: 1.5rem;
   padding: 0.5rem 1rem;
   margin-top: 2rem;
 }
-.errormessage{
-  background-color: rgba(255, 0, 0, 0.527);
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
 
-}
-/* //////////random facts///////// */
 
+/* //////////random facts page///////// */
 .factloading{
   display: flex;
   height: 100vh;
@@ -488,6 +480,7 @@ margin-right: 1.5rem;
   border-radius: 10px;
   font-size: 1.2rem;
 }
+
 /* ///////////////leaderboard///////// */
 .leader-board{
   height: 100%;
@@ -505,9 +498,9 @@ margin-right: 1.5rem;
   top: 0;
   left: 0;
   right: 0;
-  max-height: 42vh;
+  height: 45vh;
   justify-content: center;
-  padding: 2.5rem 0 1rem;
+  padding: 1.5rem 0 1rem;
   border-radius: 0 0px 3rem 3rem;
 }
 .first-leader{
@@ -519,17 +512,17 @@ margin-right: 1.5rem;
   border-radius: 50%;
   font-size: 4rem;
   border: rgba(255, 255, 255, 0.1) 7px solid;
-  height: 9rem;
-  width: 9rem;
-  margin-top: 0.3rem;
+  height: 7rem;
+  width: 7rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .leader-point{
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 0.5rem;
+
 }
 .leader-username{
   font-size: 1rem;
@@ -538,7 +531,7 @@ margin-right: 1.5rem;
   display: flex;
   flex-direction: column;
 
-  margin-top: 40vh;
+  margin-top: 48vh;
 }
 .user{
   background-color: var(--primary-color);
