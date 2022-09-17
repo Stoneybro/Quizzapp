@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React, { useState,useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import './App.css'
+import categorydata from './category'
+import home from './Home.png'
+import Home from './Home'
+import {FaPlay,FaHistory,FaHome} from 'react-icons/fa'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [category,setcategory]=useState()
+  
+  const [questions,setquestions]=React.useState()
+  const [difficulty,setdifficulty]=React.useState()
+  const{byCategory,byDifficulty}=categorydata
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+const difficulties=Object.keys(byDifficulty)
+  const categories=Object.keys(byCategory)
+
+ function ApiCall(newcategorydifficulty) {
+  if (categories.includes(newcategorydifficulty)) {
+    const regex=/ & /
+    setcategory(newcategorydifficulty.replace(regex, '_and_' ))
+
+  }
+  if (difficulties.includes(newcategorydifficulty)) {
+    setdifficulty(newcategorydifficulty)
+  }
+
+}
+
+
+    return(
+      // <Frontpage change={changestart} categories={category} />
+    <Home apiCall={ApiCall} categorydifficulty={[category,difficulty]} />
+
+    )
+
 }
 
 export default App
