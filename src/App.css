@@ -612,6 +612,10 @@ p {
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.bnav-link{
+  color: rgba(199, 199, 199, 1);
+  text-align: center;
+}
 
 
 
