@@ -14,10 +14,10 @@ export default function bnavbar(params) {
 
     return(
         <div className="bottomnavbar">
-        <div className='links'> <NavLink   to='/' ><RiHomeSmileFill color='rgba(199, 199, 199, 1' size={40} className='active-link'  /></NavLink>Home</div>
-        <div className='links'> <NavLink to='/Randomfact' ><AiOutlineBulb color='rgba(199, 199, 199, 1' size={40}  className='active-link'   /></NavLink>Facts</div>
-        <div className='links'> <NavLink to='/Leaderboard'><BiBarChartAlt2 color='rgba(199, 199, 199, 1' size={40} className='active-link'  /></NavLink>Leaderboard</div>
-        <div className='links'> <NavLink to='/Historypage'><BiHistory color='rgba(199, 199, 199, 1' size={40}  className='active-link' /></NavLink>History</div>
+        <div className='links'> <NavLink className='bnav-link'  to='/' ><RiHomeSmileFill color='rgba(199, 199, 199, 1' size={30}  />Home</NavLink></div>
+        <div className='links'> <NavLink className='bnav-link' to='/Randomfact' ><AiOutlineBulb color='rgba(199, 199, 199, 1' size={30}    />Facts</NavLink></div>
+        <div className='links'> <NavLink className='bnav-link' to='/Leaderboard'><BiBarChartAlt2 color='rgba(199, 199, 199, 1' size={30}  />Leaderboard</NavLink></div>
+        <div className='links'> <NavLink className='bnav-link' to='/Historypage'><BiHistory color='rgba(199, 199, 199, 1' size={30}  />History</NavLink></div>
       </div>
     )
 }

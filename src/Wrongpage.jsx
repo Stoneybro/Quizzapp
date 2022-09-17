@@ -5,6 +5,7 @@ export default function (params) {
     <div className="quizapp">
    
     Wrong page 
+
  
  </div>
   )

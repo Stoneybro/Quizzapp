@@ -76,17 +76,17 @@ useEffect(()=>{
         </div>
       <div className="home-dashboard">
         <div className="points">
-          <AiOutlineStar  size={30} />
+          <AiOutlineStar  size={25} />
           <div className="points-text">POINTS</div>
           <div className="points-figure">{points}</div>
         </div>
         <div className="win-percent">
-            <RiVipCrownLine size={30} />
+            <RiVipCrownLine size={25} />
             <div className="win-percent-text">WIN PERCENTAGE</div>
             <div className="win-percent-figure">{percentage}%</div>
         </div>
         <div className="rank">
-              <BiBarChartAlt2  size={30} />
+              <BiBarChartAlt2  size={25} />
               <div className="rank-text">RANK</div>
               <div className="rank-figure">1</div>
         </div>

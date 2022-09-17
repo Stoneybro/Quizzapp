@@ -23,7 +23,7 @@ export default function (params) {
       <div className="recent">Recent</div>
       <div className="clear-recent" onClick={clear} >Clear All <span>< AiFillDelete size={25} color='rgba(191, 95, 91, 1)' /></span></div>
     </div>
-    <div className="recent-cards">
+    <div className="recent-card-container">
    {history&&history[0].reverse().map((history,index)=>{
     return(
 

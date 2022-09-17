@@ -172,7 +172,7 @@ const correctans=questions?.reduce((total,amount)=>{
 
                 
               
-                <button className='restart' onClick={()=>history.back()}> Go Home</button>
+                <button className='gohome' onClick={()=>history.back()}> Go Home</button>
             </div>}
       
             
