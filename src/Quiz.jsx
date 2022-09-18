@@ -51,14 +51,7 @@ useEffect(()=>{
         }))
         
        },[])
-    function getlocalstorage(params) {
-        
-        if (localStorage.getItem('answers')) {
-            return JSON.parse(localStorage.getItem('answers'))
-        }else{
-            return questions
-        }
-    }
+
 function clearstorage(params) {
     localStorage.removeItem('answers')
 }
@@ -85,7 +78,7 @@ const correctans=questions?.reduce((total,amount)=>{
 
  
    function handleselect(id,answer) {
-    if (stopClick) {
+    if (stopClick) {//logic to stop if the checkanswers function is called(submit button)
         return
     }
    setquestions(question=>question.map((question)=>{
@@ -100,16 +93,13 @@ const correctans=questions?.reduce((total,amount)=>{
    )
    }
 
-   useEffect(()=>{
-    localStorage.setItem('answers',JSON.stringify(questions))
-   },[handleselect])
    function checkanswers(params) {
     setquestions(questions.map((question)=>{
         return({...question,showanswer:true})
     }))
     setStopClick(true)
     setshowmodal(true)
-    setscores(scores.map((scoress)=>{
+    setscores(scores.map((scoress)=>{//saving the category name and score of the questions answers to be used in the history page
         return([...scoress,{category:questions[0].category,score:`${correctans.length}/10`}])
 
     }))
