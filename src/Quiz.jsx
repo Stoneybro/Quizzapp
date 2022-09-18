@@ -12,7 +12,7 @@ export default function Quiz() {
     const [questions,setquestions]=React.useState()
     const [stopClick,setStopClick]=React.useState(false)
     const [showmodal,setshowmodal]=React.useState(false)
-    const [ans,setans]=React.useState(false)
+    const [submit,setsubmit]=React.useState(true)
     const [goback,setgoback]=React.useState(false)
     const [scores,setscores]=React.useState(JSON.parse(localStorage.getItem('scores'))||[''])
     const [dataloading,setdataloading]=React.useState(true)
@@ -113,6 +113,7 @@ const correctans=questions?.reduce((total,amount)=>{
         return([...scoress,{category:questions[0].category,score:`${correctans.length}/10`}])
 
     }))
+    setsubmit(false)
    }
 
 
@@ -178,8 +179,9 @@ const correctans=questions?.reduce((total,amount)=>{
             
       {questionelements}
  
-     <button className='submitbutton' type="button" onClick={()=>checkanswers()}>Submit</button>
-
+{submit? <button className='submitbutton' type="button" onClick={()=>checkanswers()}>Submit</button>: 
+    <button className='submitbutton submitbutton-inactive' type="button" >Submit</button>
+}
 
    </div>
     )
